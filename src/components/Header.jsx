@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import hops from '../assets/hops.jpg'
 
 function Header() {
   return (
@@ -7,7 +8,7 @@ function Header() {
     <div>
       <style jsx>{`
             .header {
-              background-color: lightgrey;
+              background-image: url(${hops});
             }
        `}</style>
       <div className='header'>
