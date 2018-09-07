@@ -5,10 +5,10 @@ import mac from '../assets/macs.png';
 
 const masterKegList = [
   {
-    name: 'Ruby Zozzle',
-    brewer: 'Hi-Wheel',
-    description: 'Sparkling Wine & Grapefruit',
-    abv: '6.8%',
+    name: 'African Amber',
+    brewer: 'Mac & Jacks',
+    description: 'The Northwest’s original, unfiltered and dry hopped amber ale. African Amber’s pioneering and innovative style is proof that drinkabilty does not have to be achieved by sacrificing flavor. This beer erupts with a floral, hoppy taste, followed by a well rounded malty middle, finishing with a nicely organic hop flavor. Locally sourced two row grain and a blend of specialty malts give our amber its rich taste. Further complexity is achieved by leaving the beer unfiltered, providing exceptional flavor, as well as giving our amber its unique "cloudy" look. Lastly, we dry hop with locally grown, Yakima valley hops creating what has become the original, cult classic, northwest amber ale.',
+    abv: '5.8%',
     price: '7',
     remaining: '20',
     img: mac
@@ -20,7 +20,7 @@ const masterKegList = [
     abv: '4.5%',
     price: '6',
     remaining: '60',
-    img: mac
+
   },
   {
     name: 'Hamm\'s',
@@ -29,7 +29,7 @@ const masterKegList = [
     abv: '4.7%',
     price: '3',
     remaining: '65',
-    img: mac
+
   },
   {
     name: 'Prismatic',
@@ -38,7 +38,7 @@ const masterKegList = [
     abv:  '5.9%',
     price: '6',
     remaining: '75',
-    img: mac
+
   },
   {
     name: 'Juicy Haze',
@@ -47,7 +47,7 @@ const masterKegList = [
     abv:  '7.5%',
     price: '6',
     remaining: '18',
-    img: mac
+
   },
   {
     name: '8 Hop',
@@ -56,7 +56,7 @@ const masterKegList = [
     abv:  '5.5%',
     price: '6',
     remaining: '58',
-    img: mac
+
   }
 ];
 
@@ -70,6 +70,7 @@ function KegList() {
           brewer={keg.brewer}
           price={keg.price}
           remaining={keg.remaining}
+          img={keg.img}
           key={index}/>
       )}
     </div>

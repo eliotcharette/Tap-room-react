@@ -17,6 +17,10 @@ function Keg(props) {
             font-size: 50px;
             text-align: center;
           }
+          .img {
+            height: 100%;
+            width: 100%;
+          }
           .card-body {
 
           }
@@ -26,12 +30,13 @@ function Keg(props) {
         <h3 className="card-title">{props.name}</h3>
         <div className="row">
           <div className="col-md-6">
-            <img src={props.img} />
+            <img src={props.img} className="img" />
           </div>
           <div className="card-body col-md-6">
             <p><em>{props.description}</em></p>
-            <p><strong>{props.brewer}</strong></p>
-            <h4>${props.price} - about {props.remaining} pints left.</h4>
+            <h4>Brewery: {props.brewer}</h4>
+            <h4>Price: ${props.price}</h4>
+            <h4>Remaining: {props.remaining} pints.</h4>
           </div>
         </div>
       </div>
@@ -45,7 +50,7 @@ Keg.propTypes = {
   brewer: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   remaining: PropTypes.string.isRequired,
-  img: PropTypes.element.isRequired,
+  img: PropTypes.element,
 };
 
 export default Keg;
