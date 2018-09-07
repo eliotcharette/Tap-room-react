@@ -21,8 +21,13 @@ function Keg(props) {
             height: 100%;
             width: 100%;
           }
+          .img:hover {
+            background-color: black;
+          }
           .card-body {
-
+            margin: auto;
+          }
+          .row {
           }
       `}
       </style>
