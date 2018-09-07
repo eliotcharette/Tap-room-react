@@ -1,15 +1,17 @@
 import React from 'react';
 import Keg from './Keg';
+import mac from '../assets/macs.png';
 
 
-var masterKegList = [
+const masterKegList = [
   {
     name: 'Ruby Zozzle',
     brewer: 'Hi-Wheel',
     description: 'Sparkling Wine & Grapefruit',
     abv: '6.8%',
     price: '7',
-    remaining: '20'
+    remaining: '20',
+    img: mac
   },
   {
     name: 'Tart N Juicy',
@@ -17,7 +19,8 @@ var masterKegList = [
     description: 'Sour IPA',
     abv: '4.5%',
     price: '6',
-    remaining: '60'
+    remaining: '60',
+    img: mac
   },
   {
     name: 'Hamm\'s',
@@ -25,7 +28,8 @@ var masterKegList = [
     description: 'American Lager',
     abv: '4.7%',
     price: '3',
-    remaining: '65'
+    remaining: '65',
+    img: mac
   },
   {
     name: 'Prismatic',
@@ -33,7 +37,8 @@ var masterKegList = [
     description: 'Juicy IPA',
     abv:  '5.9%',
     price: '6',
-    remaining: '75'
+    remaining: '75',
+    img: mac
   },
   {
     name: 'Juicy Haze',
@@ -41,7 +46,8 @@ var masterKegList = [
     description: 'India Pale Ale',
     abv:  '7.5%',
     price: '6',
-    remaining: '18'
+    remaining: '18',
+    img: mac
   },
   {
     name: '8 Hop',
@@ -49,7 +55,8 @@ var masterKegList = [
     description: 'Pale Ale',
     abv:  '5.5%',
     price: '6',
-    remaining: '58'
+    remaining: '58',
+    img: mac
   }
 ];
 
