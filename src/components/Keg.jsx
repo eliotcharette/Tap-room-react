@@ -10,11 +10,29 @@ function Keg(props) {
           }
         `}
       </style>
-      <div>
-        <h3>{props.name}</h3>
-        <p><em>{props.description}</em></p>
-        <p><strong>{props.brewer}</strong></p>
-        <h4>${props.price} - about {props.remaining} pints left.</h4>
+      <style>{`
+          .card-title {
+            background-color: lightgreen;
+            font-size: 50px;
+            text-align: center;
+          }
+          .card-body {
+
+          }
+      `}
+      </style>
+      <div className="card">
+        <h3 className="card-title">{props.name}</h3>
+        <div className="row">
+          <div className="col-md-6">
+          
+          </div>
+          <div className="card-body col-md-6">
+            <p><em>{props.description}</em></p>
+            <p><strong>{props.brewer}</strong></p>
+            <h4>${props.price} - about {props.remaining} pints left.</h4>
+          </div>
+        </div>
       </div>
     </div>
   );
