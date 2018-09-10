@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hops from '../assets/hops.jpg'
+import hops from '../assets/hops.jpg';
 
 function Header() {
   return (

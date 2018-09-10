@@ -16,6 +16,7 @@ function Keg(props) {
             background-color: lightgreen;
             font-size: 50px;
             text-align: center;
+            margin-bottom: 0px;
           }
           .img {
             height: 100%;
