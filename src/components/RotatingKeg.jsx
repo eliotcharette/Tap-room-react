@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import Moment from 'moment';
 
 function RotatingKeg(props) {
   return (
@@ -43,6 +43,7 @@ function RotatingKeg(props) {
             <h4>Brewery: {props.brewer}</h4>
             <h4>Name: {props.name}</h4>
             <h4>Email: {props.email}</h4>
+            <h5>Requested: {props.formattedWaitTime} ago</h5>
           </div>
         </div>
       </div>
@@ -57,6 +58,7 @@ RotatingKeg.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   img: PropTypes.element,
+  formattedWaitTime: PropTypes.string.isRequired,
 };
 
 export default RotatingKeg;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import Moment from 'moment';
 
 
 function NewKegForm(props){
@@ -12,7 +13,7 @@ function NewKegForm(props){
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({beer: _beer.value, brewer: _brewer.value, name: _name.value, email: _email.value, comments: _comments.value, id: v4()});
+    props.onNewKegCreation({beer: _beer.value, brewer: _brewer.value, name: _name.value, email: _email.value, comments: _comments.value, id: v4(), timeOpen: new Moment()});
     _beer.value = '';
     _brewer.value = '';
     _name.value = '';

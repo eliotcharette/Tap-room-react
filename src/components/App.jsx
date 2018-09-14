@@ -5,6 +5,7 @@ import KegList from './KegList';
 import Error404 from './Error404';
 import NewKegControl from './NewKegControl';
 import RotatingList from './RotatingList';
+import Moment from 'moment';
 
 class App extends React.Component {
 
@@ -15,8 +16,25 @@ class App extends React.Component {
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(() =>
+      this.updateRequestElapsedWaitTime(),
+    60000
+    );
+  }
+  componentWillUnmount(){
+    clearInterval(this.waitTimeUpdateTimer);
+  }
+  updateRequestElapsedWaitTime() {
+    let newMasterKegList = this.state.rotatingKegList.slice();
+    newMasterKegList.forEach((keg) =>
+      keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
+    );
+    this.setState({rotatingKegList: newMasterKegList});
+  }
   handleAddingNewKegToList(newKeg){
     var newMasterKegList = this.state.rotatingKegList.slice();
+    newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true);
     newMasterKegList.push(newKeg);
     this.setState({rotatingKegList: newMasterKegList});
   }

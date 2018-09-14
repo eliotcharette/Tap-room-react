@@ -12,6 +12,7 @@ function RotatingList(props){
           name={keg.name}
           email={keg.email}
           img={keg.img}
+          formattedWaitTime={keg.formattedWaitTime}
           key={keg.id}/>
       )}
     </div>
