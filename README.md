@@ -18,8 +18,9 @@ September 2018
 
 ## Future Additions
 
-1.
+1.Allow user to upload images in form for new beer requests.
 
+##Component Flow Chart
 
 | Component Flow Chart|
 |-----------|
