@@ -20,12 +20,12 @@ function Header() {
               object-fit: cover;
             }
        `}</style>
-     <div className='header'>
+      <div className='header'>
         <div>
           <div className='jumbotron'>
             <p>Est. 1985</p>
-          <h1>Bonafide Brewing</h1>
-          <h4>This Month's featured brewery: <em>Mac & Jack's</em></h4>
+            <h1>Bonafide Brewing</h1>
+            <h4>This Month's featured brewery: <em>Mac & Jack's</em></h4>
           </div>
           <button><Link to="/">Home</Link></button>
           <button><Link to="/newkeg">Beer Request</Link></button>
