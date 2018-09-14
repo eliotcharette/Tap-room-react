@@ -10,12 +10,12 @@ class RotatingList extends React.Component {
     this.state = {
     };
     this.handleThumbUpClick = this.handleThumbUpClick.bind(this);
-    this.handleSortTweets = this.handleSortTweets.bind(this);
+    this.handleSortRequests = this.handleSortRequests.bind(this);
     this.handleThumbDownClick = this.handleThumbDownClick.bind(this);
   }
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
-      this.handleSortTweets(),
+      this.handleSortRequests(),
     5000
     );
   }
@@ -23,27 +23,27 @@ class RotatingList extends React.Component {
   componentWillUnmount(){
     clearInterval(this.waitTimeUpdateTimer);
   }
-  handleSortTweets(){
+  handleSortRequests(){
     this.setState(() => {
-      this.props.kegList.sort(compareTweets);
+      this.props.kegList.sort(compareRequests);
     });
   }
 
   handleThumbUpClick(key){
-    let tempIndex = this.findTweetIndex(key);
+    let tempIndex = this.findRequestIndex(key);
     this.setState(() => {
       this.props.kegList[tempIndex].thumbsUp++;
     });
   }
 
   handleThumbDownClick(key){
-    let tempIndex = this.findTweetIndex(key);
+    let tempIndex = this.findRequestIndex(key);
     this.setState(() => {
       this.props.kegList[tempIndex].thumbsDown++;
     });
   }
 
-  findTweetIndex(key)
+  findRequestIndex(key)
   {
     return this.props.kegList.map((keg) => { return keg.id; }).indexOf(key);
   }
@@ -88,7 +88,7 @@ RotatingList.propTypes = {
 
 export default RotatingList;
 
-function compareTweets(tweetOne,tweetTwo)
+function compareRequests(requestOne,requestTwo)
 {
-  return tweetTwo.thumbsUp - tweetOne.thumbsUp;
+  return requestTwo.thumbsUp - requestOne.thumbsUp;
 }
