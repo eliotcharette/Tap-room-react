@@ -46,6 +46,16 @@ function RotatingKeg(props) {
             <h5>Requested: {props.formattedWaitTime} ago</h5>
           </div>
         </div>
+        <div className="row">
+          <div className="col-md-3">
+            <p>{props.thumbsUp}</p>
+            <p>{props.thumbsDown}</p>
+          </div>
+          <div className="col-md-9">
+            <button onClick={()=>props.onClickUp(props.id)}>👍</button><br/>
+            <button onClick={()=>props.onClickDown(props.id)}>👎</button>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -59,6 +69,8 @@ RotatingKeg.propTypes = {
   email: PropTypes.string.isRequired,
   img: PropTypes.element,
   formattedWaitTime: PropTypes.string.isRequired,
+  onClickUp: PropTypes.func,
+  onClickDown: PropTypes.func,
 };
 
 export default RotatingKeg;

@@ -10,15 +10,19 @@ function NewKegForm(props){
   let _name = null;
   let _email = null;
   let _comments = null;
+  let _thumbsUp = 0;
+  let _thumbsDown = 0;
 
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({beer: _beer.value, brewer: _brewer.value, name: _name.value, email: _email.value, comments: _comments.value, id: v4(), timeOpen: new Moment()});
+    props.onNewKegCreation({beer: _beer.value, brewer: _brewer.value, name: _name.value, email: _email.value, comments: _comments.value, thumbsUp: _thumbsUp, thumbsDown: _thumbsDown, id: v4(), timeOpen: new Moment()});
     _beer.value = '';
     _brewer.value = '';
     _name.value = '';
     _email.value = '';
     _comments.value = '';
+    _thumbsUp = 0;
+    _thumbsDown = 0;
   }
   return (
     <div>
