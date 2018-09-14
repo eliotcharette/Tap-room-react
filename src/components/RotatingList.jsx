@@ -1,6 +1,7 @@
 import React from 'react';
 import RotatingKeg from './RotatingKeg';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class RotatingList extends React.Component {
 
@@ -14,9 +15,9 @@ class RotatingList extends React.Component {
   }
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
-  this.handleSortTweets(),
-  5000
-);
+      this.handleSortTweets(),
+    5000
+    );
   }
 
   componentWillUnmount(){
@@ -48,26 +49,38 @@ class RotatingList extends React.Component {
   }
 
   render() {
-  return (
-    <div>
-      {this.props.kegList.map((keg) =>
-        <RotatingKeg beer={keg.beer}
-          comments={keg.comments}
-          brewer={keg.brewer}
-          name={keg.name}
-          email={keg.email}
-          img={keg.img}
-          thumbsUp={keg.thumbsUp}
-          thumbsDown={keg.thumbsDown}
-          onClickUp={this.handleThumbUpClick}
-          onClickDown={this.handleThumbDownClick}
-          formattedWaitTime={keg.formattedWaitTime}
-          id={keg.id}
-          key={keg.id}/>
-      )}
-    </div>
-  );
-}
+    return (
+      <div>
+        <style jsx>{`
+          .head {
+            text-align: center
+          }
+          `}
+        </style>
+        <div className="head">
+          <h1>Beer Request List</h1>
+          <p>(Click <Link to="/newkeg">here</Link> to add a beer to the list or vote for an existing one!)</p>
+        </div>
+        <div>
+          {this.props.kegList.map((keg) =>
+            <RotatingKeg beer={keg.beer}
+              comments={keg.comments}
+              brewer={keg.brewer}
+              name={keg.name}
+              email={keg.email}
+              img={keg.img}
+              thumbsUp={keg.thumbsUp}
+              thumbsDown={keg.thumbsDown}
+              onClickUp={this.handleThumbUpClick}
+              onClickDown={this.handleThumbDownClick}
+              formattedWaitTime={keg.formattedWaitTime}
+              id={keg.id}
+              key={keg.id}/>
+          )}
+        </div>
+      </div>
+    );
+  }
 }
 RotatingList.propTypes = {
   kegList: PropTypes.array
