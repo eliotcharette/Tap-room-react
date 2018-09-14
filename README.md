@@ -23,7 +23,7 @@ September 2018
 
 | Flow Chart|
 |-----------|
-|![alt text](./src/assets/ComponentChart.xml)|
+|![alt text](./src/assets/ComponentChart.png)|
 ### Technologies Used
 
 * JS
