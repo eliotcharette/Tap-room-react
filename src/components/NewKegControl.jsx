@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
 import NewKegForm from './NewKegForm';
+import PropTypes from 'prop-types';
 
 class NewKegControl extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class NewKegControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewKegForm />;
+      currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation}/>;
     } else {
       currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleShootingConfirmation}/>;
     }
@@ -29,5 +30,8 @@ class NewKegControl extends React.Component {
     );
   }
 }
+NewKegControl.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKegControl;

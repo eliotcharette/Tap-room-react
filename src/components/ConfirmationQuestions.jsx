@@ -11,7 +11,7 @@ function ConfirmationQuestions(props) {
       `}
       </style>
       <div className="question">
-        <h3>Would you like to add a new keg?</h3>
+        <h3>Would you like to request a beer?</h3>
         <button className="btn btn-info" onClick={props.onTroubleshootingConfirmation}>Sure Do!</button>
       </div>
     </div>

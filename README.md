@@ -21,7 +21,7 @@ September 2018
 1.
 
 
-| Flow Chart|
+| Component Flow Chart|
 |-----------|
 |![alt text](./src/assets/ComponentChart.png)|
 ### Technologies Used
