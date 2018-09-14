@@ -6,9 +6,11 @@ Eliot Charette
 September 2018
 
 ## Installation
-1. Clone to your local computer from github.
-2. First type "npm i" in your command line.
-3. Then type "npm run start" in your command line.
+
+1. git clone https://github.com/eliotcharette/Tap-room-react.git
+2. cd Tap-room-react
+3. npm install
+4 npm run start
 
 
 ## Specifications

@@ -28,7 +28,10 @@ function RotatingKeg(props) {
           .card-body {
             margin: auto;
           }
-          .row {
+          button {
+            width: 200px;
+            text-align: left;
+            height: 40px;
           }
       `}
       </style>
@@ -52,8 +55,8 @@ function RotatingKeg(props) {
             <p>{props.thumbsDown}</p>
           </div>
           <div className="col-md-9">
-            <button onClick={()=>props.onClickUp(props.id)}>👍</button><br/>
-            <button onClick={()=>props.onClickDown(props.id)}>👎</button>
+            <button onClick={()=>props.onClickUp(props.id)}>👍 Yes Please</button><br/>
+            <button onClick={()=>props.onClickDown(props.id)}>👎 Not My Favorite</button>
           </div>
         </div>
       </div>
