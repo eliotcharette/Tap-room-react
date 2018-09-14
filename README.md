@@ -15,8 +15,10 @@ September 2018
 
 ## Specifications
 
-1. Allow user to display current list of kegs.
-2. Allow user to add more kegs to keg list.
+1. Allow user request new beers.
+2. Allow user vote up or down requested beers.
+3. Display feature beer list.
+
 
 ## Future Additions
 
@@ -25,7 +27,7 @@ September 2018
 
 | Component Flow Chart|
 |-----------|
-|![alt text](./src/assets/ComponentChart.png)|
+|![alt text](./src/assets/ComponentFlowChart.png)|
 ### Technologies Used
 
 * JS
